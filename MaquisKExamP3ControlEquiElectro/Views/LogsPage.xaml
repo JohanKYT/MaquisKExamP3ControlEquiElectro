@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaquisKExamP3ControlEquiElectro.Views.LogsPage"
+             Title="Logs">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Button Text="Abrir carpeta de Logs" Clicked="OnAbrirCarpetaClicked" />
+            <Label Text="Logs:" FontAttributes="Bold" FontSize="Medium" />
+            <CollectionView ItemsSource="{Binding Logs}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding}" Margin="5"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
