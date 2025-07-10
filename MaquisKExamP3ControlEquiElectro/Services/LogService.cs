@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaquisKExamP3ControlEquiElectro.LogService
+namespace MaquisKExamP3ControlEquiElectro.Services
 {
     public static class LogService
     {
