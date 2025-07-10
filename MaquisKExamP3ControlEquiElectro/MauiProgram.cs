@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MaquisKExamP3ControlEquiElectro.Data;
+using MaquisKExamP3ControlEquiElectro.Views;
+using Microsoft.Extensions.Logging;
 
 namespace MaquisKExamP3ControlEquiElectro
 {
@@ -7,6 +9,17 @@ namespace MaquisKExamP3ControlEquiElectro
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "equipos.db");
+
+            builder.Services.AddSingleton<AppDatabase>(s => new AppDatabase(dbPath));
+
+            builder.Services.AddSingleton<RegistroPage>();
+            builder.Services.AddSingleton<ListaPage>();
+            builder.Services.AddSingleton<LogsPage>();
+
+            builder.Services.AddSingleton<AppShell>();
+
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
