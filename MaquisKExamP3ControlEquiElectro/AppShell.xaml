@@ -12,7 +12,7 @@
         ContentTemplate="{DataTemplate views:RegistroPage}" />
 
         <ShellContent
-        Title="Lista BD"
+        Title="Lista de Dispositivos"
         ContentTemplate="{DataTemplate views:ListaPage}" />
 
         <ShellContent
