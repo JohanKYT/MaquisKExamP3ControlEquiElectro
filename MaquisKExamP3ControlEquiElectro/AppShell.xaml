@@ -3,12 +3,21 @@
     x:Class="MaquisKExamP3ControlEquiElectro.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MaquisKExamP3ControlEquiElectro"
+    xmlns:views="clr-namespace:MaquisKExamP3ControlEquiElectro.Views"
     Title="MaquisKExamP3ControlEquiElectro">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+        Title="Registrar"
+        ContentTemplate="{DataTemplate views:RegistroPage}" />
+
+        <ShellContent
+        Title="Lista BD"
+        ContentTemplate="{DataTemplate views:ListaPage}" />
+
+        <ShellContent
+        Title="Ver Logs"
+        ContentTemplate="{DataTemplate views:LogsPage}" />
+    </TabBar>
 
 </Shell>
